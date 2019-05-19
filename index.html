@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>HTML Email Project #1</title>
+
+    <style>
+        @media only screen and (min-width: 960px)
+        {
+            .container
+            {
+                width: 960px;
+            }
+
+            .header_left
+            {
+                width: 100%;
+                text-align: center;
+            }
+
+            .header_right
+            {
+                width: 100%;
+                text-align: center;
+            }
+
+            .header_left_column 
+            {
+                padding-top: 2rem;
+            }
+
+            .header_left_column h3
+            {
+                font-size: 2.5rem;
+            }
+
+            .header_left_column p
+            {
+                font-size: 1.3rem !important;
+                margin-bottom: 2rem !important;
+            }
+
+            .header_left_column button
+            {
+                font-size: 1.5rem;
+                margin-bottom: 3rem;
+            }
+
+            .header_right_column nav ul li
+            {
+                font-size: 1.5rem;
+            }
+
+            .header_right_column img
+            {
+                height: 85% !important;
+            }
+
+            .lets_you_left p, .lets_you_center p, .lets_you_right p
+            {
+                font-size: 1.1rem !important;
+                margin-bottom: 2rem;
+            }
+
+            .notify
+            {
+                grid-gap: 40px !important;
+            }
+
+            .notify img
+            {
+                width: 60px;
+            }
+
+            .notify h4
+            {
+                font-size: 1.3rem;
+            }
+
+            .lets_you_row a
+            {
+                font-size: 1.3rem !important;
+            }
+
+            .worlds_most_left
+            {
+                width: 100%;
+                padding-right: 8.5rem;
+            }
+
+            .worlds_most_right
+            {
+                width: 100%;
+                text-align: center;
+                padding: 4rem;
+            }
+
+            .worlds_most_right h2
+            {
+                font-size: 2.5rem;
+            }
+
+            .worlds_most_right p
+            {
+                font-size: 1.2rem !important;
+            }
+
+            .worlds_most_right img
+            {
+                width: 175px;
+            }
+
+            .one_app
+            {
+                padding: 3rem 4rem !important;
+            }
+
+            .one_solution_left
+            {
+                width: 100%;
+                text-align: center;
+            }          
+
+            .one_solution_left h2
+            {
+                font-size: 2.5rem;
+            }
+
+            .one_solution_left p
+            {
+                font-size: 1.2rem !important;
+            }
+
+            .one_solution_right
+            {
+                width: 100%;
+                font-size: 1.8rem;
+            }
+
+            .ultimate
+            {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            .ultimate h2
+            {
+                font-size: 2rem;
+            }
+
+            .ultimate p
+            {
+                font-size: 1.2rem !important;
+            }
+
+            .ultimate a
+            {
+                font-size: 1.2rem !important;
+            }
+
+            .great_app_table
+            {
+                padding: 4rem 2rem !important;
+            }
+
+            .great_app_grid
+            {
+                display: grid;
+                grid-template-columns: 1fr !important;
+            }
+
+            .great_app_left
+            {
+                width: 100%;
+                text-align: center;
+            }
+
+            .great_app_left h2
+            {
+                font-size: 2rem;
+            }
+
+            .great_app_left p
+            {
+                font-size: 1.1rem !important;
+            }
+
+            .great_app_left button
+            {
+                font-size: 1.3rem !important;
+            }
+
+            .great_app_right
+            {
+                width: 100%;
+                font-size: 1.8rem;
+            }
+
+            .great_app_right div
+            {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                text-align: center;
+            }
+
+            .quote_table tr td h1
+            {
+                font-size: 3.5rem !important;
+            }
+
+            .quote_table tr td p, h5, a
+            {
+                font-size: 1.2rem !important;
+            }
+
+            .square_selection div
+            {
+                height: 10px !important;
+                width: 10px !important;
+            }
+
+            .latest_table h3
+            {
+                font-size: 1.6rem;
+            }
+
+            .latest_table p
+            {
+                font-size: 1.2rem !important;
+            }
+
+            .subscribe_table input
+            {
+                font-size: 1.1rem;
+            }
+
+            .subscribe_table button
+            {
+                font-size: 1.2rem !important;
+            }
+
+            .subscribe_table .copyright_icons p, .subscribe_table .copyright_icons i
+            {
+                font-size: 1.1rem !important;
+                margin-top: 1.5rem;
+            } 
+
+        }
+
+        @media only screen and (max-width: 960px)
+        {
+
+        }
+
+        @media only screen and (max-width: 600px)
+        {
+            .container
+            {
+                width: 100%;
+            }
+            
+            .header_left
+            {
+                width: 100%;
+                text-align: center;
+                padding: 2rem;
+            }
+
+            .header_right
+            {
+                width: 100%;
+            }
+
+            .lets_you_grid
+            {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                text-align: center;
+            }
+
+            .lets_you_left, .lets_you_center, .lets_you_right
+            {
+                width: 100%;
+            }
+
+            .lets_you_center, .lets_you_right
+            {
+                margin-top: 2rem;
+            }
+
+            .worlds_most_left, .worlds_most_right
+            {
+                width: 100%;
+                text-align: center;
+                padding: 0 2rem;
+            }
+
+            .worlds_most_right, .one_solution_right
+            {
+                padding-bottom: 3rem;
+            }
+
+            .one_solution_left, .one_solution_right
+            {
+                width: 100%;
+                text-align: center;
+            }
+
+            .ultimate
+            {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                text-align: center;
+            }
+
+            .great_app_grid
+            {
+                display: grid !important; 
+                grid-template-columns: 1fr !important;
+                text-align: center;
+                padding-right: 1rem;
+            }
+
+            .great_app_right
+            {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                margin-top: 1rem;
+            }
+
+            .reviews
+            {
+                padding: 2rem 0 !important;
+                width: 100%;
+            }
+
+            .latest_table_grid
+            {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                grid-gap: 2rem;
+            }
+
+            .copyright_icons
+            {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                text-align: center;
+            }
+
+            .copyright_icons div
+            {
+                display: flex;
+                justify-content: space-evenly;
+                margin-top: 1rem;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: black; margin: 0; padding: 0; box-sizing: border-box;">
+    <!-- Start of HTML Email -->
+    <table width="100%">
+        <tr>
+            <td>
+                <!-- Start of Container -->
+                <table style="position: relative; bottom: 8px;" class="container" width="600" align="center">
+                    <!-- Start of Email Marketing row -->
+                    <tr style="color: #fff; background: #65fffd; /* Old browsers */
+                    background: -moz-linear-gradient(45deg, #65fffd 0%, #2989d8 100%, #2296ee 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(45deg, #65fffd 0%,#2989d8 100%,#2296ee 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(45deg, #65fffd 0%,#2989d8 100%,#2296ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */">
+                        <td style="position: relative; top: 6px;">
+                            <table style="padding-left: 3rem;" class="header_left" width="50%" align="left">
+                                <tr>
+                                    <td class="header_left_column">
+                                        <h3 style="margin-bottom: 3rem;">SUBLIME Tech</h3>
+                                        <h1 style="font-weight: 300; font-size: 2.5rem;">Email<br> Marketing</h1>
+                                        <p style="line-height: 1.5; font-size: .8rem; margin-bottom: 1rem;">Lorem ipsum dolor sit, amet consectetur 
+                                        adipisicing elit. Rem repellat libero 
+                                        asperiores omnis aliquid delectus dolorum 
+                                        culpa id excepturi deleniti!</p>
+                                        <button style="background: transparent; border: 1px solid #fff; padding: .3rem .8rem; color: #fff;">Learn More</button>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="header_right" width="50%" align="right">
+                                <tr>
+                                    <td class="header_right_column">
+                                        <header style="width: 100%; height: 60px; display: flex; justify-content: center; align-items: center; font-size: .7rem;">
+                                            <nav>
+                                                <ul style="padding: 1rem;">
+                                                    <li style="margin-right: 1rem; display: inline;"><a style="text-decoration: none; color: #fff; text-transform: uppercase;" href="#">About</a></li>
+                                                    <li style="margin-right: 1rem; display: inline;"><a style="text-decoration: none; color: #fff; text-transform: uppercase;" href="#">Careers</a></li>
+                                                    <li style="display: inline;"><a style="text-decoration: none; color: #fff; text-transform: uppercase;" href="#">Contact</a></li>
+                                                </ul>
+                                            </nav>
+                                        </header>
+                                        <img style="width: 100%; position: relative; top: 5px; left: 3px;;" src="img/img1.jpg" alt="">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of Email Marketing row -->
+
+                     <!-- Start of Email lets you... row -->
+                     <tr>
+                        <td class="lets_you_row" style="font-weight: 100; position: relative; top: 5px; background: rgb(250, 250, 250); padding: 2rem;">
+                            <h1 style="font-weight: 100; text-align: center; margin-bottom: 2rem;">Email let's you...</h1>
+                            <div class="lets_you_grid" style="display: flex; justify-content: space-evenly;">
+                                <table style="margin-right: 10px;" class="lets_you_left" align="left">
+                                        <tr>
+                                            <td>
+                                                <div class="notify" style="display: grid; grid-template-columns: 35px 35px; grid-gap: 20px;">
+                                                    <img src="img/bell_icon.png" alt="">
+                                                    <h4 style="font-weight: 300; position: relative; bottom: 10px;">NOTIFY</h4>
+                                                </div>
+                                                <p style="line-height: 1.5; font-size: .8rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                Vel repellendus omnis magnam! Nemo dolores voluptas nobis, 
+                                                nostrum doloremque voluptates perspiciatis?</p>
+                                                <a style="text-decoration: none; color: #2296ee; font-size: .9rem;" href="#">Learn more</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+        
+                                    <table style="margin-right: 10px;" class="lets_you_center" align="center">
+                                        <tr>
+                                            <td>
+                                                <div class="notify" style="display: grid; grid-template-columns: 35px 35px; grid-gap: 20px;">
+                                                    <img src="img/share_icon.png" alt="">
+                                                    <h4 style="font-weight: 300; position: relative; bottom: 10px;">SHARE</h4>
+                                                </div>
+                                                <p style="line-height: 1.5; font-size: .8rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                Vel repellendus omnis magnam! Nemo dolores voluptas nobis, 
+                                                nostrum doloremque voluptates perspiciatis?</p>
+                                                <a style="text-decoration: none; color: #2296ee; font-size: .9rem;" href="#">Learn more</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+        
+                                    <table class="lets_you_right" align="right">
+                                        <tr>
+                                            <td>
+                                                <div class="notify" style="display: grid; grid-template-columns: 35px 35px; grid-gap: 20px;">
+                                                    <img src="img/wifi_icon.png" alt="">
+                                                    <h4 style="font-weight: 300; position: relative; bottom: 10px;">CONNECT</h4>
+                                                </div>
+                                                <p style="line-height: 1.5; font-size: .8rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                Vel repellendus omnis magnam! Nemo dolores voluptas nobis, 
+                                                nostrum doloremque voluptates perspiciatis?</p>
+                                                <a style="text-decoration: none; color: #2296ee; font-size: .9rem;" href="#">Learn more</a>
+                                            </td>
+                                        </tr>
+                                    </table>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- End of Email lets you... row -->
+
+                    <!-- Start of most advanced email app row -->
+                    <tr class="worlds_most">
+                        <td style="background: #fff; position: relative; top: 4px; padding: 2rem 2.5rem 0 0; padding-top: 2rem;">
+                            <table class="worlds_most_left" width="50%" align="left">
+                                <tr>
+                                    <td>
+                                        <img style="width: 100%; height: 68%;" src="img/image2.jpg" alt="">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="worlds_most_right" width="50%" align="right">
+                                <tr>
+                                    <td>
+                                        <h2 style="font-weight: 300;">World's <span style="font-weight: bold;">most advanced Email App</span> with High-Tech solutions</h2>
+                                        <p style="margin-bottom: 2.5rem; line-height: 1.5; font-size: .8rem;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam corrupti quibusdam, 
+                                        perferendis inventore distinctio sunt numquam tempore sapiente mollitia ut 
+                                        repellendus ex vel quaerat? Accusamus itaque facere laboriosam, nobis eaque 
+                                        molestias ullam! Eaque officia velit omnis dolores modi perferendis sint fuga 
+                                        esse, doloremque mollitia eos quasi aspernatur, at earum numquam.</p>
+                                        <div>
+                                            <img style="margin-right: 5px;" src="img/playstore.png" alt="">
+                                            <img src="img/appstore.png" alt="">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of most advanced email app row -->
+
+                    <!-- Start of one app one solution row -->
+                    <tr>
+                        <td class="one_app" style="position: relative; top: 3px; color: #fff; padding: .5rem; background: #65fffd; /* Old browsers */
+                        background: -moz-linear-gradient(45deg, #65fffd 0%, #2989d8 100%, #2296ee 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(45deg, #65fffd 0%,#2989d8 100%,#2296ee 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(45deg, #65fffd 0%,#2989d8 100%,#2296ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */">
+                            <table class="one_solution_left" width="30%" align="left">
+                                <tr>
+                                    <td>
+                                        <h2 style="font-weight: 300;">One App, <span style="font-weight: bold;">One Solution</span></h2>
+                                        <p style="font-size: .8rem;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Autem corrupti totam excepturi officia ipsa, nesciunt 
+                                        laborum inventore quos recusandae facere?</p>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="one_solution_right" width="70%" align="right">
+                                <tr>
+                                    <td>
+                                        <div class="one_solution_hover" style="display: flex; justify-content: space-evenly; margin-top: 10%;">
+                                            <div style="border: 1px solid #fff; padding: 1rem .75rem 0 .75rem;">
+                                                <i style="color: #fff; display: flex; justify-content: center;" class="fas fa-map-marker-alt"></i>
+                                                <h6 style="font-weight: 300;">LOCATIONS</h6>
+                                            </div>
+                                            <div style="background: #fff; padding: 1rem .75rem 0 .75rem;">
+                                                <i style="color: #2296ee; display: flex; justify-content: center;" class="fas fa-microphone"></i>
+                                                <h6 style="font-weight: 300; color: black;">VOICE-OVER</h6>
+                                            </div>
+                                            <div style="border: 1px solid #fff; padding: 1rem .75rem 0 .75rem;">
+                                                <i style="color: #fff; display: flex; justify-content: center;" class="far fa-calendar"></i>
+                                                <h6 style="font-weight: 300;">CALENDAR</h6>
+                                            </div>
+                                            <div style="border: 1px solid #fff; padding: 1rem .75rem 0 .75rem;">
+                                                <i style="color: #fff; display: flex; justify-content: center;" class="far fa-heart"></i>
+                                                <h6 style="font-weight: 300;">HEART RATE</h6>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of one app one solution row -->
+
+                    <!-- Start of ultimate solution row -->
+                    <tr>
+                        <td>
+                            <table style="position: relative; top: 1px; background: #fff; padding: 1rem;" align="center" width="100%">
+                                <tr>
+                                    <td>
+                                        <img style="width: 100%; display: flex; justify-content: center;" src="img/img3.jpg" alt="video">
+
+                                        <div class="ultimate" style="display: flex; justify-content: space-evenly;">
+                                            <h2 style="font-weight: 300;">The <span style="font-weight: bold;">Ultimate Solution</span> for All Multiple Devices</h2>
+                                            <div>
+                                                <p style="font-size: .8rem; line-height: 1.5;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                                Praesentium aperiam perspiciatis, fugiat eius quod eos 
+                                                repellendus ad recusandae ipsum? Esse!</p>
+                                                <a style="text-decoration: none; color: #2296ee; font-size: .9rem;;" href="#">Learn More</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                
+                                  
+                              
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of ultimate solution row -->
+                    
+                    <!-- Start of great app row -->
+                    <tr>
+                        <td>
+                            <table class="great_app_table"  style="padding: 3rem 0 3rem 1rem; background: rgb(250, 250, 250);" width="100%" align="center">
+                                <tr class="great_app_grid" style="display: grid; grid-template-columns: 1fr 1fr; grid-gap: 20px;">
+                                    <td class="great_app_left">
+                                        <h2 style="font-weight: 300;">Why you should buy this <span style="font-weight: bold;">Great App...</span></h2>
+                                        <p style="margin-bottom: 1.5rem; font-size: .8rem; line-height: 1.5;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Non, reiciendis ipsum accusamus adipisci sint dignissimos 
+                                        distinctio eveniet veritatis aspernatur eaque vitae. Dolorum 
+                                        magnam cupiditate a maiores cum nobis, sapiente aperiam 
+                                        sunt alias recusandae rerum dignissimos animi voluptatum 
+                                        hic modi illum aliquam error exercitationem amet illo 
+                                        molestias laborum ab sit deleniti!</p>
+                                        <button style="border: none; background: #2296ee; padding: .5rem 1rem; font-size: 1rem; color: #fff; border-radius: 3px; font-weight: 300;">Learn More</button>
+                                    </td>
+                                    <td class="great_app_right" align="right" style="position: relative;">
+                                        <div style="display: grid; grid-template-columns: repeat(3, 70px); grid-gap: 1rem;">
+                                            <div>
+                                                <i style="background: #fff; border-radius: 50%; padding: 1rem;" class="fab fa-mixcloud fa-2x"></i>
+                                                <h4 style="font-weight: 300; margin-right: 8px;">iCloud</h4>
+                                            </div>
+                                            <div>
+                                                <i style="color: #2296ee; background: #fff; border-radius: 50%; padding: 1rem;" class="far fa-image fa-2x"></i>
+                                                <h4 style="font-weight: 300; margin-right: 5px; color: #2296ee;">Photos</h4>
+                                            </div>
+                                            <div>
+                                                <i style="background: #fff; border-radius: 50%; padding: 1rem;" class="far fa-bell fa-2x"></i>
+                                                <h4 style="font-weight: 300; margin-left: 8px;">Reminders</h4>
+                                            </div>
+                                            <div>
+                                                <i style="background: #fff; border-radius: 50%; padding: 1rem;" class="fas fa-map-marker-alt fa-2x"></i>
+                                                <h4 style="font-weight: 300; margin-right: 8px;">Maps</h4>
+                                            </div>
+                                            <div>
+                                                <i style="background: #fff; border-radius: 50%; padding: 1rem;" class="fas fa-sync fa-2x"></i>
+                                                <h4 style="font-weight: 300;">Backups</h4>
+                                            </div>
+                                            <div>
+                                                <i style="background: #fff; border-radius: 50%; padding: 1rem;" class="fas fa-music fa-2x"></i>
+                                                <h4 style="font-weight: 300;">Music</h4> 
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of great app row -->
+
+                    <!-- Start of four square row -->
+                    <tr>
+                        <td>
+                            <table class="reviews" width="100%" align="center;" style="color: #fff; padding: 2rem 0; background: #65fffd; /* Old browsers */
+                            background: -moz-linear-gradient(45deg, #65fffd 0%, #2989d8 100%, #2296ee 100%); /* FF3.6-15 */
+                            background: -webkit-linear-gradient(45deg, #65fffd 0%,#2989d8 100%,#2296ee 100%); /* Chrome10-25,Safari5.1-6 */
+                            background: linear-gradient(45deg, #65fffd 0%,#2989d8 100%,#2296ee 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */">
+                                <tr style="display: flex; justify-content: space-evenly; align-items: center;">
+                                    <td style="text-align: center; border: 1px solid #fff; padding: 0 2rem;">
+                                        <div style="position: relative; top: 15px;">
+                                            <h1 style="font-weight: 300;">5K</h1>
+                                            <h3 style="position: relative; bottom: 20px; font-weight: 100">Happy</h3>
+                                            <p style="position: relative; bottom: 35px; font-size: .8rem;">Customers</p>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; border: 1px solid #fff; padding: 0 2rem;">
+                                        <div style="position: relative; top: 15px;">
+                                            <h1 style="font-weight: 300;">150</h1>
+                                            <h3 style="position: relative; bottom: 20px; font-weight: 100">Sweet</h3>
+                                            <p style="position: relative; bottom: 35px; font-size: .8rem;">Template</p>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; border: 1px solid #fff; padding: 0 2rem;">
+                                        <div style="position: relative; top: 15px;">
+                                            <h1 style="font-weight: 300;">20</h1>
+                                            <h3 style="position: relative; bottom: 20px; font-weight: 100">Great</h3>
+                                            <p style="position: relative; bottom: 35px; font-size: .8rem;">Partner</p>
+                                        </div>
+                                    </td>
+                                    <td style="text-align: center; border: 1px solid #fff; padding: 0 2rem;">
+                                        <div style="position: relative; top: 15px;">
+                                            <h1 style="font-weight: 300;">90</h1>
+                                            <h3 style="position: relative; bottom: 20px; font-weight: 100">Email</h3>
+                                            <p style="position: relative; bottom: 35px; font-size: .8rem;">Delivered</p>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of four square row -->
+
+                    <!-- Start of reviews row -->
+                    <tr>
+                        <td>
+                            <table class="quote_table"  style="background: #fff; padding: 2rem 4rem;" width="100%" align="center">
+                                <tr>
+                                    <td>
+                                        <h1 style="font-size: 2.5rem; color: lightgray; text-align: center;">"</h1>
+                                        <p style="font-size: .8rem; position: relative; bottom: 15px; text-align:center;">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Non veritatis quibusdam dolorum commodi ut tenetur porro 
+                                        sed corrupti vero, numquam, exercitationem sequi eum 
+                                        reiciendis similique, quos esse eligendi autem voluptatum 
+                                        beatae. Hic veniam sint cumque nemo animi est tenetur 
+                                        laborum!</p>
+                                        <h5 style="text-align: center;">Michai Adam</h5>
+                                        <a style="text-decoration: none; display: block; font-size: .7rem; color: #2296ee; position: relative; bottom: 15px; text-align: center;" href="#">Web Developer</a>
+                                        <div  class="square_selection" style="display: flex; justify-content: center;">
+                                            <div style="margin-right: 5px; width: 5px; height: 5px; background: lightgray;"></div>
+                                            <div style="margin-right: 5px; width: 5px; height: 5px; background: #2296ee;"></div>
+                                            <div style="width: 5px; height: 5px; background: lightgray;"></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of reviews row -->
+
+                    <!-- Start of latest from our blog row -->
+                    <tr>
+                        <td>
+                            <table class="latest_table" width="100%" align="center" style="background: rgb(250, 250, 250);">
+                                <tr>
+                                    <td style="padding: 2rem 2rem;">
+                                        <h1 style="text-align: center;">Latest from <span style="font-weight: 300;">our Blog</span></h1>
+                                        <div class="latest_table_grid" style="display: flex; justify-content: space-evenly;">
+                                            <div style="margin-right: 20px;">
+                                                <img style="width: 100%;" src="img/img4.jpg" alt="blog image phone">
+                                                <h3 style="font-weight: 300;">Benefits of Griffin Survivor iPhone 5</h3>
+                                                <p style="line-height: 1.5; font-size: .8rem;">Lorem ipsum dolor sit amet, consectetur adipisicing 
+                                                elit. Sed quae corporis temporibus numquam eum 
+                                                rerum adipisci quis cupiditate sit quaerat!</p>
+                                                <a style="text-decoration: none; color: #2296ee; font-size: .8rem;" href="#">Read more</a>
+                                            </div>
+                                             
+                                            <div style="margin-right: 20px;"> 
+                                                <img style="width: 100%;" src="img/img5.jpg" alt="blog image phone">
+                                                <h3 style="font-weight: 300;">Altimate Solution for Mobile Application</h3>
+                                                <p style="line-height: 1.5; font-size: .8rem;">Lorem ipsum dolor sit amet, consectetur adipisicing 
+                                                elit. Sed quae corporis temporibus numquam eum 
+                                                rerum adipisci quis cupiditate sit quaerat!</p>
+                                                <a style="text-decoration: none; color: #2296ee; font-size: .8rem;" href="#">Read more</a>
+                                            </div>
+                                      
+                                            <div>
+                                                <img style="width: 100%;" src="img/img6.jpg" alt="blog image phone">
+                                                <h3 style="font-weight: 300;">All Mobile Application Develop Platforms</h3>
+                                                <p style="line-height: 1.5; font-size: .8rem;">Lorem ipsum dolor sit amet, consectetur adipisicing 
+                                                elit. Sed quae corporis temporibus numquam eum 
+                                                rerum adipisci quis cupiditate sit quaerat!</p>
+                                                <a style="text-decoration: none; color: #2296ee; font-size: .8rem;" href="#">Read more</a>
+                                            </div>
+                                        </div> 
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of latest from our blog row -->
+
+                    <!-- Start of subscribe now row -->
+                    <tr>
+                        <td>
+                            <table class="subscribe_table" style="padding: 2rem 4rem; background: #fff;" width="100%" align="center">
+                                <tr>
+                                    <td>
+                                        <h1 style="font-weight: 300; text-align: center;">Find Yours ? <span style="font-weight: bold;">Subscribe now</span></h1>
+                                        <div style="text-align: center;">
+                                            <input style="border: none; margin-right: 10px; box-shadow: 5px 5px 5px 1px #2296ee; width: 50%; padding: .5rem;" type="text" placeholder="Email Address">
+                                            <button style="font-size: .9rem; color: #fff; border: none; outline: none; background: #2296ee; padding: .5rem 1.5rem; border-radius: 5px; text-transform: uppercase;">Subscribe</button>
+                                        </div>
+                                        <div style="padding-top: 3rem; border-bottom: 2px solid #2296ee; width: 100%;"></div>
+                                        <div class="copyright_icons" style="display: flex; align-items: center; justify-content: space-between;">
+                                            <p style="font-size: .8rem;">&copy; Copyright 2017. Email Marketing by Victor Themes</p>
+                                            <div>
+                                                <i style="color: #fff; background: #2296ee; border-radius: 50%; padding: .5rem;" class="fab fa-twitter"></i>
+                                                <i style="color: #fff; background: #2296ee; border-radius: 50%; padding: .5rem;" class="fab fa-facebook-f"></i>
+                                                <i style="color: #fff; background: #2296ee; border-radius: 50%; padding: .5rem;" class="fab fa-google-plus-g"></i>
+                                                <i style="color: #fff; background: #2296ee; border-radius: 50%; padding: .5rem;" class="fab fa-youtube"></i> 
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- End of subscribe now row -->
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
